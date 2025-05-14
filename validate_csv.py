@@ -1,4 +1,7 @@
-def remove_columns(data, columns_to_remove):  # Функция для удаления колонок id и email
+def remove_columns(
+    data: list,
+    columns_to_remove: list,
+) -> list:  # Функция для удаления колонок id и email
     # Определяем индексы колонок, которые нужно удалить
     header = data[0]
     remove_indices = []
@@ -17,7 +20,9 @@ def remove_columns(data, columns_to_remove):  # Функция для удале
     return new_data
 
 
-def standardize_structure(data):  # Функция для стандартизации
+def standardize_structure(
+    data: list,
+) -> list:  # Функция для стандартизации
     header = list(data[0])
 
     # Определяем индексы нужных колонок по их названиям
@@ -39,7 +44,9 @@ def standardize_structure(data):  # Функция для стандартиза
     return standardized
 
 
-def read_csv(*paths):
+def read_csv(
+    *paths: str,
+) -> list:
     all_data = []
     for path in list(*paths):
         with open(path, "r") as file:

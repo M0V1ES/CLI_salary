@@ -1,4 +1,6 @@
-def create_report_payout(csv: list) -> str:  # создание отчета по зарплатам
+def create_report_payout(
+    csv: list,
+) -> str:  # создание отчета по зарплатам
     dict_payload = {}
     dict_humans = {}
     for count, items in enumerate(csv):

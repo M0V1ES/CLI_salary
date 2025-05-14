@@ -6,7 +6,7 @@ from payout import create_report_payout
 from validate_csv import read_csv
 
 
-def csv_file(path):
+def csv_file(path: str) -> str:
     """Проверяет, что файл имеет расширение .csv"""
     if not path.lower().endswith(".csv"):
         raise argparse.ArgumentTypeError(f"Файлы должны иметь расширение .csv")
