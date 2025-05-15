@@ -37,4 +37,10 @@ parser.add_argument(
 
 В своем проекте я использовал форматтер black
 
+Код был покрыт тестами на 91% по pytest-covю
+
+Чтобы запустить проверку покрытия я использовал следующую команду: pytest --showlocals --html=report.html --self-contained-html --cov=. test_main.py
+
+Благодаря report.html создается отчет в формате html, который можно легко просмотреть
+
 Спасибо за внимание!
