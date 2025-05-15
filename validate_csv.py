@@ -45,7 +45,7 @@ def standardize_structure(
 
 
 def read_csv(
-    *paths: str,
+    *paths: list[str],
 ) -> list:
     all_data = []
     for path in list(*paths):
@@ -56,6 +56,6 @@ def read_csv(
                 if line:  # Пропускаем пустые строки
                     results.append(tuple(line.split(",")))
             data = remove_columns(results, ["id", "email"])
+            print(data)
             all_data.extend(standardize_structure(data))
-
     return all_data
